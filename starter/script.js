@@ -356,4 +356,307 @@ if (mark.bmi > john.bmi) {
   );
 }
 
+
+
+// console.log("Lifting weights repetition 1");
+// console.log("Lifting weights repetition 2");
+// console.log("Lifting weights repetition 3");
+// console.log("Lifting weights repetition 4");
+// console.log("Lifting weights repetition 5");
+// console.log("Lifting weights repetition 6");
+// console.log("Lifting weights repetition 7");
+// console.log("Lifting weights repetition 8");
+// console.log("Lifting weights repetition 9");
+// console.log("Lifting weights repetition 10");
+
+//for loop ი გრძელდება მანამ სანამ კონდინცია არის TRUE
+for (let rep = 1; rep <= 30; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}
+
+
+const jonas = [
+  "Jonas",
+  "Schmedtman",
+  2037 - 1991,
+  "teache",
+  ["michael", "Peter", "Steven"],
+  true,
+];
+
+const types = [];
+
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// console.log(jonas[2]);
+// console.log(jonas[3]);
+
+for (let i = 0; i < jonas.length; i++) {
+  //Reading from jonas array
+  console.log(jonas[i], typeof jonas[i]);
+
+  //Filling types array
+  //   types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+//continue ans break
+console.log("----- ONLY STRINGS --------");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== "string") continue;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log("----- BRAKE WITH NUMBER --------");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === "number") break;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+
+const jonas = [
+  "Jonas",
+  "Schmedtman",
+  2037 - 1991,
+  "teache",
+  ["michael", "Peter", "Steven"],
+  true,
+];
+//0, 1, ...4
+//4, 3, ...0
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`---------Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise} Lifting weights repetition ${rep} 🏋️`);
+  }
+}
+
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋️`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   //   console.log(`WHILE: Lifting weights repetition ${rep} 🏋️`);
+//   //   rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Loop is to end...");
+}
+
+
+//CHALLENGE
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
+}
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i <= arr.length - 1; i++) {
+    sum = sum + arr[i];
+  }
+
+  return sum / arr.length;
+};
+
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
 */
+
+// const age = Number(prompt("შეიყვანე შენი ასაკი"));
+// if (age > 18) {
+//   console.log("შეგიძლია შეიჭრა საიტზე");
+// } else {
+//   console.log("დარჩი მოზარდებისთვის განკუთვნილ ნაწილში");
+// }
+
+// const calculate = function (num1, num2, operarot) {
+//   switch (operarot) {
+//     case "+":
+//       return num1 + num2;
+//       break;
+//     case "-":
+//       return num1 - num2;
+//       break;
+//     case "*":
+//       return num1 * num2;
+//       break;
+//     case "/":
+//       return num1 / num2;
+//       break;
+//     default:
+//       return "არასწორი ოპერატორი";
+//   }
+// };
+
+// // ტესტი:
+// console.log(calculate(4, 2, "+")); // 6
+// console.log(calculate(10, 5, "-")); // 5
+// console.log(calculate(3, 3, "*")); // 9
+// console.log(calculate(10, 2, "/")); // 5
+// console.log(calculate(10, 2, "^")); // 'არასწორი ოპერატორი'
+
+// const findMax = function (a, b, c) {
+//   if (a > b && a > c) {
+//     return a;
+//   } else if (b > a && b > c) {
+//     return b;
+//   } else if (c > a && c > b) {
+//     return c;
+//   }
+// };
+
+// console.log(findMax(4, 6, 7));
+// console.log(findMax(9, 6, 7));
+// console.log(findMax(4, 12, 7));
+// console.log(findMax(25, 6, 7));
+// console.log(findMax(25, 25, 7));
+
+// const num1 = Number(prompt("შეიყავნეთ პირველი რიცხვი"));
+// const oprat = prompt("შეიყვანეთ მოქმედების ნიშანი");
+// const num2 = Number(prompt("შეიყავნეთ მეორე რიცხვი"));
+
+// switch (oprat) {
+//   case "+":
+//     console.log(num1 + num2);
+//     break;
+
+//   case "-":
+//     console.log(num1 - num2);
+//     break;
+
+//   case "*":
+//     num1 * num2;
+//     console.log(num1 * num2);
+//     break;
+
+//   case "/":
+//     num1 / num2;
+//     console.log(num1 / num2);
+//     break;
+
+//   default:
+//     console.log("ოპერატორი არასწორია");
+// }
+
+// "use strict";
+
+// const day = prompt("შეიყვანეთ კვირის დღე");
+
+// switch (day) {
+//   case "ორშაბათი":
+//     console.log("დღეს ვწერ კოდს");
+//     break;
+
+//   case "სამშაბათი":
+//     console.log("მივდივარ სავარჯიშოდ");
+//     break;
+
+//   case "ოთხშაბათი":
+//   case "ხუთშაბათი":
+//     console.log("დილით ვდგები სავარჯიშოდ");
+//     break;
+
+//   default:
+//     console.log("მივდივარ სამსახურში");
+// }
+
+//
+
+// const firstName = prompt("შეიყვანეთ თქვენი სახელი");
+// const age = Number(prompt("შეიყვანეთ თქვენი ასაკი"));
+// const mass = Number(prompt("შეიყვანეთ თქვენი წონა"));
+// const height = Number(prompt("შეიყვანეთ თქვენი სიმაღლე"));
+
+// const bmi = mass / (height * height);
+// console.log(`თქვენი BMI არის ${bmi}`);
+
+// const calcBMI = function (weights, height) {
+//   return weights / (height * height);
+// };
+// calcBMI(mass, height);
+// console.log(`თქვენი BMI არის: ${calcBMI(mass, height)}`);
+
+// const recomend = function (bmi) {
+//   if (bmi < 18.5) {
+//     console.log(`${bmi} დაბალი წონა. რეკომენდირებულია:
+//         	კვების გაუმჯობესება და მეტ კალორიულ საკვებზე ყურადღება. საჭიროა მასის მომატება და სპეციალისტის კონსულტაცია`);
+//   } else if (bmi >= 18.5 && bmi <= 24.9) {
+//     console.log(`${bmi} ნორმალური წონა, რეკომენდაცია:
+//             კვების გაუმჯობესება და მეტ კალორიულ საკვებზე ყურადღება. საჭიროა მასის მომატება და სპეციალისტის კონსულტაცია`);
+//   } else if (bmi >= 25 && bmi <= 29.9) {
+//     console.log(`${bmi} ზედმეტი წონა, რეკომენდაცია:
+//        	    მსუბუქი დიეტა, მეტაბოლიზმის დაჩქარება — დაიწყე მეტი მოძრაობა და აკონტროლე რაციონი.`);
+//   } else if (bmi >= 30) {
+//     console.log(`${bmi} სიმსუქნე (ობეზობა), რეკომენდაცია:
+//        	    	საჭიროა სერიოზული ყურადღება. ივარჯიშე ყოველდღე, შეამცირე შაქარი და ცხიმი. მიმართე ექიმს ან დიეტოლოგს.`);
+//   }
+// };
+// console.log(recomend(calcBMI(mass, height)));
+
+// const activities = [
+//   { day: "ორშაბათი", type: "სირბილი", duration: 30 },
+//   { day: "სამშაბათი", type: "ხელის ვარჯიში", duration: 45 },
+//   { day: "ოთხშაბათი", type: "მკერდის ვარჯიში", duration: 20 },
+//   { day: "ხუთშაბათი", type: "ფეხის ვარჯიში", duration: 60 },
+//   { day: "პარასკევი", type: "ზურგის ვარჯიში", duration: 15 },
+// ];
+
+// const printSummary = function (activities) {
+//   let totalDuration = 0;
+//   let maxDuration = 0;
+//   let mostActiveDay = "";
+
+//   for (let i = 0; i < activities.length; i++) {
+//     const activity = activities[i];
+
+//     totalDuration = totalDuration + activity.duration;
+
+//     if (activity.duration > maxDuration) {
+//       maxDuration = activity.duration;
+//       mostActiveDay = activity.day;
+//     }
+//   }
+//   const averageDuration = totalDuration / activities.length;
+
+//   console.log(`ჯამური დრო: ${totalDuration} წთ`);
+//   console.log(`საშუალო დრო: ${averageDuration.toFixed(1)} წთ`);
+//   console.log(`ყველაზე აქტიური დღე: ${mostActiveDay} (${maxDuration} წთ)`);
+// };
+
+// console.log(printSummary(activities));
